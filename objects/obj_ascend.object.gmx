@@ -81,6 +81,7 @@ global.hijacklevel+=1;
 global.fat=1;
 global.spawnrate=300;
 global.dmg=1;
+global.poison=0;
 score=0;
 
 
@@ -100,12 +101,13 @@ with obj_hijackbutton{instance_destroy();}
 with obj_hijacktext{instance_destroy();}
 with obj_mutatebutton{instance_destroy();}
 with obj_mutatetext{instance_destroy();}
+with obj_curebutton{instance_destroy();}
+with obj_curetext{instance_destroy();}
 
-if global.arrowright=1 
-with obj_arrowright{instance_destroy();}
+{with obj_arrowright{instance_destroy();}}
+{with obj_arrowleft{instance_destroy();}}
 
-else if global.arrowleft=1
-with obj_arrowleft{instance_destroy();}
+global.arrow=0;
 
 instance_create(60,25,obj_shopbutton);
 with obj_ascend{instance_destroy();}

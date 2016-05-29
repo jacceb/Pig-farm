@@ -50,11 +50,7 @@
             <kind>1</kind>
             <string>hspeed=0;
 
-if global.arrowleft=1
-instance_create(43,250,obj_arrowleft);
 
-else if global.arrowright=1
-instance_create(760,250,obj_arrowright);
 </string>
           </argument>
         </arguments>

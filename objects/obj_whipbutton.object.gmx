@@ -128,6 +128,7 @@ if global.whiplevel=3 &amp;&amp; score &gt;=100
 {
 score-=100;
 global.whiplevel+=1;
+global.poison=1;
 global.dmg+=0.3;
 }
 if global.whiplevel=4 &amp;&amp; score &gt;=200

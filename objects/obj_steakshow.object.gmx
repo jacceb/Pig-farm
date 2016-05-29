@@ -34,9 +34,10 @@ global.hijacklevel=0;
 global.dmg=1;
 global.shop=0;
 global.room2=0;
-global.arrowleft=0;
-global.arrowright=0;
+global.arrow=0;
 global.fat=1;
+global.poison=0;
+global.pigvaluepo=0;
 score+=20000;
 
 </string>
@@ -63,6 +64,8 @@ score+=20000;
             <kind>1</kind>
             <string>if global.room2=1
 {image_index=1;}
+
+
 
 else image_index=0;
 

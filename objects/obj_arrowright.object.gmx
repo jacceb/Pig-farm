@@ -76,7 +76,8 @@ if mouse_check_button_released(mb_left)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if obj_mutatebutton.hspeed=0
+{
 with obj_mutatetext 
 {alarm[0]=30;
 hspeed=-29;}
@@ -112,11 +113,35 @@ with obj_whiptext
 {alarm[0]=30;
 hspeed=-29;}
 
+if global.poison=1
+{
+{with obj_curetext
+{alarm[0]=30;
+hspeed=-29;}}
+
+{with obj_curebutton
+{alarm[0]=30;
+hspeed=-29;}}
+}
 //&amp;&amp; obj_spawnratetext &amp;&amp; obj_whiptext &amp;&amp; obj_whipbutton
 
-global.arrowright=0;
-global.arrowleft=1;
-instance_destroy();
+global.arrow+=1;
+
+if global.arrow=1
+{
+
+instance_create(43,250,obj_arrowleft);
+if global.poison =0
+{with obj_arrowright {instance_destroy();}}
+
+}
+
+if global.arrow=2
+{
+with obj_arrowright{instance_destroy();}
+
+}
+}
 </string>
           </argument>
         </arguments>
