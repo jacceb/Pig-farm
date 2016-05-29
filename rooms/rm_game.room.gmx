@@ -6,7 +6,7 @@
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
-  <speed>30</speed>
+  <speed>60</speed>
   <persistent>0</persistent>
   <colour>16777215</colour>
   <showcolour>-1</showcolour>
@@ -58,9 +58,9 @@
     <instance objName="obj_wall" x="864" y="256" name="inst_26C218AF" locked="0" code="" scaleX="4.5" scaleY="18.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-96" y="288" name="inst_0A95BBB2" locked="0" code="" scaleX="6.01999998092651" scaleY="24.3125" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="416" y="576" name="inst_25F0E932" locked="0" code="" scaleX="26.125" scaleY="5.98999977111816" colour="4294967295" rotation="0"/>
-    <instance objName="obj_shopbutton" x="120" y="18" name="inst_2E8A68EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_settingsbutton" x="40" y="18" name="inst_57E29526" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_shopbutton" x="60" y="25" name="inst_2E8A68EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_setuptheshopbois" x="0" y="0" name="inst_D6C33C17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="60" y="25" name="inst_B6725834" locked="0" code="" scaleX="3.79999995231628" scaleY="1.5" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

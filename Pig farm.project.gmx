@@ -9,29 +9,46 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_pig</sprite>
+    <sprite>sprites\spr_pig1_5</sprite>
+    <sprite>sprites\spr_pig2</sprite>
     <sprite>sprites\spr_unipig</sprite>
     <sprite>sprites\spr_hit</sprite>
     <sprite>sprites\spr_steak</sprite>
     <sprite>sprites\spr_unisteak</sprite>
     <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\spr_shopbutton</sprite>
     <sprite>sprites\spr_settingsbutton</sprite>
     <sprite>sprites\spr_spawnratebutton</sprite>
+    <sprite>sprites\spr_spawnratebutton2</sprite>
+    <sprite>sprites\spr_mutatebutton</sprite>
+    <sprite>sprites\spr_mutatebutton1_5</sprite>
+    <sprite>sprites\spr_mutatebutton2</sprite>
+    <sprite>sprites\spr_hijackbutton</sprite>
+    <sprite>sprites\spr_hijackbutton1_5</sprite>
+    <sprite>sprites\spr_hijackbutton2</sprite>
+    <sprite>sprites\spr_whipbutton</sprite>
+    <sprite>sprites\spr_weaponbutton</sprite>
     <sprite>sprites\spr_spawnratetext</sprite>
     <sprite>sprites\spr_whiptext</sprite>
-    <sprite>sprites\spr_whipbutton</sprite>
+    <sprite>sprites\spr_mutatetext</sprite>
+    <sprite>sprites\spr_hijacktext</sprite>
+    <sprite>sprites\spr_shopbutton</sprite>
+    <sprite>sprites\spr_shopbutton2</sprite>
     <sprite>sprites\spr_back</sprite>
+    <sprite>sprites\spr_back2</sprite>
     <sprite>sprites\spr_ascend</sprite>
+    <sprite>sprites\spr_ascend2</sprite>
     <sprite>sprites\spr_white</sprite>
     <sprite>sprites\spr_hai</sprite>
+    <sprite>sprites\spr_arrowright</sprite>
+    <sprite>sprites\spr_arrowright2</sprite>
+    <sprite>sprites\sprite32</sprite>
+    <sprite>sprites\spr_arrowleft</sprite>
+    <sprite>sprites\spr_arrowleft2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts">
-    <script>scripts\scr_text.gml</script>
-  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_8</font>
   </fonts>
@@ -46,11 +63,14 @@
     <object>objects\obj_score</object>
     <object>objects\obj_steakshow</object>
     <object>objects\obj_shopbutton</object>
-    <object>objects\obj_settingsbutton</object>
     <objects name="shop">
       <object>objects\obj_whipbutton</object>
-      <object>objects\obj_whiptext</object>
+      <object>objects\obj_mutatebutton</object>
+      <object>objects\obj_hijackbutton</object>
       <object>objects\obj_spawnratebutton</object>
+      <object>objects\obj_whiptext</object>
+      <object>objects\obj_mutatetext</object>
+      <object>objects\obj_hijacktext</object>
       <object>objects\obj_spawnratetext</object>
     </objects>
     <object>objects\obj_back</object>
@@ -58,10 +78,11 @@
     <object>objects\obj_white</object>
     <object>objects\obj_ascend</object>
     <object>objects\obj_hai</object>
+    <object>objects\obj_arrowright</object>
+    <object>objects\obj_arrowleft</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
-    <room>rooms\rm_level2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

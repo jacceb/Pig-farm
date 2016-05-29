@@ -27,13 +27,20 @@
             <kind>1</kind>
             <string>if global.shop=1{
 instance_create(0,0,obj_white);
-instance_create(575,250,obj_whipbutton);
-instance_create(585,415,obj_whiptext);
-instance_create(225,250,obj_spawnratebutton);
-instance_create(225,415,obj_spawnratetext);
-instance_create(50,30,obj_back);
+instance_create(560,250,obj_whipbutton);
+instance_create(570,415,obj_whiptext);
+instance_create(240,250,obj_spawnratebutton);
+instance_create(240,415,obj_spawnratetext);
+instance_create(60,25,obj_back);
+instance_create(760,250,obj_arrowright);
+instance_create(1110,250,obj_mutatebutton);
+instance_create(1430,250,obj_hijackbutton);
+instance_create(1430,415,obj_hijacktext);
+instance_create(1110,415,obj_mutatetext);
+if global.spawnratelevel=8 &amp;&amp; global.whiplevel=7 &amp;&amp; global.mutatelevel=1 &amp;&amp; global.hijacklevel=1
+{instance_create(396,60,obj_ascend)}
 
-if global.spawnratelevel=8 &amp;&amp; global.whiplevel=7
+if global.spawnratelevel=17 &amp;&amp; global.whiplevel=15 &amp;&amp; global.room2=1
 {instance_create(396,60,obj_ascend)}
 global.shop-=1;
 

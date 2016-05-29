@@ -31,6 +31,29 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hspeed=0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -48,7 +71,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if global.room2 =1
+{sprite_index=spr_weaponbutton;}
+else sprite_index=spr_whipbutton;
+
 if mouse_check_button_released(mb_left)
 {image_index=0;}
 
@@ -81,7 +107,7 @@ if mouse_check_button_released(mb_left)
 {
 score-=25;
 global.whiplevel+=1;
-global.dmg+=0.2;
+global.dmg+=0.3;
 }
 
 if global.whiplevel=1 &amp;&amp; score &gt;=40
@@ -102,26 +128,73 @@ if global.whiplevel=3 &amp;&amp; score &gt;=100
 {
 score-=100;
 global.whiplevel+=1;
-global.dmg+=0.2;
+global.dmg+=0.3;
 }
 if global.whiplevel=4 &amp;&amp; score &gt;=200
 {
 score-=200;
 global.whiplevel+=1;
-global.dmg+=0.2;
+global.dmg+=0.3;
 }
 if global.whiplevel=5 &amp;&amp; score &gt;=500
 {
 score-=500;
 global.whiplevel+=1;
-global.dmg+=0.2;
+global.dmg+=0.3;
 }
 if global.whiplevel=6 &amp;&amp; score &gt;=1000
 {
 score-=1000;
 global.whiplevel+=1;
-global.dmg+=0.2;
+global.dmg=10;
 }
+
+//room2
+
+if global.whiplevel=8 &amp;&amp; score &gt;=25 &amp;&amp; global.room2=1
+{
+score-=25;
+global.whiplevel+=1;
+global.dmg+=0.3;
+}
+if global.whiplevel=9 &amp;&amp; score &gt;=40 &amp;&amp; global.room2=1
+{
+score-=40;
+global.whiplevel+=1;
+global.dmg+=0.3;
+}
+if global.whiplevel=10 &amp;&amp; score &gt;=80 &amp;&amp; global.room2=1
+{
+score-=80;
+global.whiplevel+=1;
+global.dmg+=0.3;
+}
+if global.whiplevel=11 &amp;&amp; score &gt;=100 &amp;&amp; global.room2=1
+{
+score-=100;
+global.whiplevel+=1;
+global.dmg+=0.3;
+}
+if global.whiplevel=12 &amp;&amp; score &gt;=200 &amp;&amp; global.room2=1
+{
+score-=200;
+global.whiplevel+=1;
+global.dmg+=0.3;
+}
+if global.whiplevel=13 &amp;&amp; score &gt;=500 &amp;&amp; global.room2=1
+{
+score-=500;
+global.whiplevel+=1;
+global.dmg+=0.3;
+}
+
+if global.whiplevel=14 &amp;&amp; score &gt;=1000 &amp;&amp; global.room2=1
+{
+score-=1000;
+global.whiplevel+=1;
+global.dmg=10;
+}
+
 </string>
           </argument>
         </arguments>

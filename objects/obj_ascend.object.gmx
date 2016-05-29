@@ -49,6 +49,7 @@
           <argument>
             <kind>1</kind>
             <string>
+
 if mouse_check_button_released(mb_left)
 {image_index=0;}
 </string>
@@ -73,7 +74,41 @@ if mouse_check_button_released(mb_left)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(rm_level2);
+            <string>global.spawnratelevel+=1;
+global.whiplevel+=1;
+global.mutatelevel+=1;
+global.hijacklevel+=1;
+global.fat=1;
+global.spawnrate=300;
+global.dmg=1;
+score=0;
+
+
+if global.room2=1
+{global.room2=0;
+global.room3=1;}
+
+else global.room2=1;
+
+with obj_white{instance_destroy();}
+with obj_whipbutton{instance_destroy();}
+with obj_whiptext{instance_destroy();}
+with obj_spawnratebutton{instance_destroy();}
+with obj_spawnratetext{instance_destroy();}
+with obj_back{instance_destroy();}
+with obj_hijackbutton{instance_destroy();}
+with obj_hijacktext{instance_destroy();}
+with obj_mutatebutton{instance_destroy();}
+with obj_mutatetext{instance_destroy();}
+
+if global.arrowright=1 
+with obj_arrowright{instance_destroy();}
+
+else if global.arrowleft=1
+with obj_arrowleft{instance_destroy();}
+
+instance_create(60,25,obj_shopbutton);
+with obj_ascend{instance_destroy();}
 </string>
           </argument>
         </arguments>

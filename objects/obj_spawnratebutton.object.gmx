@@ -31,6 +31,35 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hspeed=0;
+
+if global.arrowleft=1
+instance_create(43,250,obj_arrowleft);
+
+else if global.arrowright=1
+instance_create(760,250,obj_arrowright);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -48,7 +77,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if global.room2=1
+{sprite_index=spr_spawnratebutton2;}
+
+else sprite_index=spr_spawnratebutton;
+
 if mouse_check_button_released(mb_left)
 {image_index=0;}
 
@@ -81,40 +114,40 @@ if mouse_check_button_released(mb_left)
 {
 score-=10;
 global.spawnratelevel+=1;
-global.spawnrate-=30;
+global.spawnrate-=65;
 }
 
 if global.spawnratelevel=1 &amp;&amp; score &gt;=25
 {
 score-=25;
 global.spawnratelevel+=1;
-global.spawnrate-=30;
+global.spawnrate-=65;
 }
 
 if global.spawnratelevel=2 &amp;&amp; score &gt;=50
 {
 score-=50;
 global.spawnratelevel+=1;
-global.spawnrate-=30;
+global.spawnrate-=65;
 }
 if global.spawnratelevel=3 &amp;&amp; score &gt;=75
 {
 score-=75;
 global.spawnratelevel+=1;
-global.spawnrate-=30;
+global.spawnrate-=65;
 }
 if global.spawnratelevel=4 &amp;&amp; score &gt;=100
 {
 score-=100;
 global.spawnratelevel+=1;
-global.spawnrate-=30;
+global.spawnrate-=65;
 }
 
 if global.spawnratelevel=5 &amp;&amp; score &gt;=200
 {
 score-=200;
 global.spawnratelevel+=1;
-global.spawnrate-=30;
+global.spawnrate-=65;
 }
 
 
@@ -122,17 +155,71 @@ if global.spawnratelevel=6 &amp;&amp; score &gt;=400
 {
 score-=400;
 global.spawnratelevel+=1;
-global.spawnrate-=30;
+global.spawnrate-=65;
 }
 
 if global.spawnratelevel=7 &amp;&amp; score &gt;=800
 {
 score-=800;
 global.spawnratelevel+=1;
-global.spawnrate-=30;
+global.spawnrate-=65;
 }
 
+if global.spawnratelevel=9 &amp;&amp; score &gt;=10 &amp;&amp; global.room2=1
+{
+score-=10;
+global.spawnratelevel+=1;
+global.spawnrate-=65;
+}
 
+if global.spawnratelevel=10 &amp;&amp; score &gt;=25 &amp;&amp; global.room2=1
+{
+score-=25;
+global.spawnratelevel+=1;
+global.spawnrate-=65;
+}
+
+if global.spawnratelevel=11 &amp;&amp; score &gt;=50 &amp;&amp; global.room2=1
+{
+score-=50;
+global.spawnratelevel+=1;
+global.spawnrate-=65;
+}
+
+if global.spawnratelevel=12 &amp;&amp; score &gt;=75 &amp;&amp; global.room2=1
+{
+score-=75;
+global.spawnratelevel+=1;
+global.spawnrate-=65;
+}
+
+if global.spawnratelevel=13 &amp;&amp; score &gt;=100 &amp;&amp; global.room2=1
+{
+score-=100;
+global.spawnratelevel+=1;
+global.spawnrate-=65;
+}
+
+if global.spawnratelevel=14 &amp;&amp; score &gt;=200 &amp;&amp; global.room2=1
+{
+score-=200;
+global.spawnratelevel+=1;
+global.spawnrate-=65;
+}
+
+if global.spawnratelevel=15 &amp;&amp; score &gt;=400 &amp;&amp; global.room2=1
+{
+score-=400;
+global.spawnratelevel+=1;
+global.spawnrate-=65;
+}
+
+if global.spawnratelevel=16 &amp;&amp; score &gt;=800 &amp;&amp; global.room2=1
+{
+score-=800;
+global.spawnratelevel+=1;
+global.spawnrate-=65;
+}
 
 </string>
           </argument>

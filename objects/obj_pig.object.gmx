@@ -28,7 +28,7 @@
             <string>global.pigvalue+=1;
 vsp=0;
 hsp=0;
-alarm[0]=100;
+alarm[0]=200;
 hp=10;
 
 
@@ -77,9 +77,9 @@ hp=10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vsp=random_range(-3,3)
-hsp=random_range(-3,3)
-alarm[1]=7;
+            <string>vsp=random_range(-2,2)
+hsp=random_range(-2,2)
+alarm[1]=14;
 </string>
           </argument>
         </arguments>
@@ -104,7 +104,7 @@ alarm[1]=7;
             <kind>1</kind>
             <string>hsp=0;
 vsp=0;
-alarm[0]=irandom(500)
+alarm[0]=irandom(1000)
 
 </string>
           </argument>
@@ -128,10 +128,10 @@ alarm[0]=irandom(500)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vsp=random_range(-3,3)
-hsp=random_range(-3,3)
+            <string>vsp=random_range(-2,2)
+hsp=random_range(-2,2)
 
-alarm[1]=30;
+alarm[1]=60;
 </string>
           </argument>
         </arguments>
@@ -155,12 +155,18 @@ alarm[1]=30;
           <argument>
             <kind>1</kind>
             <string>//Sprites+imagexscale
+if global.mutatelevel=1
+{sprite_index=spr_pig1_5;}
 
+else if global.room2=1
+{sprite_index=spr_pig2;}
+
+else sprite_index=spr_pig;
 
 
 if vsp != 0 || hsp != 0 
 {
-image_speed=0.2;
+image_speed=0.1;
 }
 
 else image_speed=0;
@@ -225,7 +231,7 @@ instance_create(x+6,y-10,obj_steak);
 instance_create(x+10,y-4,obj_steak);
 instance_create(x-5,y+10,obj_steak);
 instance_create(x-10,y+3,obj_steak); 
-score+=100;
+score+=global.fat;
 global.pigvalue-=1;
 instance_destroy();
 }

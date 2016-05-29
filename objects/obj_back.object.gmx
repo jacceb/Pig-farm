@@ -48,7 +48,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if mouse_check_button_released(mb_left)
+            <string>if global.room2=1
+{sprite_index=spr_back2;}
+else sprite_index=spr_back;
+
+
+
+if mouse_check_button_released(mb_left)
 {image_index=0;}
 </string>
           </argument>
@@ -80,6 +86,18 @@ with obj_spawnratebutton{instance_destroy();}
 with obj_spawnratetext{instance_destroy();}
 with obj_back{instance_destroy();}
 with obj_ascend{instance_destroy();}
+with obj_mutatebutton{instance_destroy();}
+with obj_mutatetext{instance_destroy();}
+with obj_hijackbutton{instance_destroy();}
+with obj_hijacktext{instance_destroy();}
+
+if global.arrowright=1 
+with obj_arrowright{instance_destroy();}
+
+else if global.arrowleft=1
+with obj_arrowleft{instance_destroy();}
+
+instance_create(60,25,obj_shopbutton);
 
 
 </string>

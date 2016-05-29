@@ -28,6 +28,7 @@
             <string>image_alpha=1;
 speed = irandom(10); 
 direction = irandom(360);
+image_speed=0;
 
 </string>
           </argument>
@@ -51,7 +52,13 @@ direction = irandom(360);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if speed &gt; 0 {
+            <string>
+if global.room2=1
+{image_index=1;}
+else image_index=0;
+
+
+if speed &gt; 0 {
     speed -= 0.5
 }
 if speed =0

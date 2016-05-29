@@ -28,7 +28,7 @@
             <string>global.pigvalue+=1;
 vsp=0;
 hsp=0;
-alarm[0]=100;
+alarm[0]=200;
 hp=10;
 
 </string>
@@ -55,7 +55,7 @@ hp=10;
             <kind>1</kind>
             <string>vsp=random_range(-3,3)
 hsp=random_range(-3,3)
-alarm[1]=7;
+alarm[1]=14;
 </string>
           </argument>
         </arguments>
@@ -80,7 +80,7 @@ alarm[1]=7;
             <kind>1</kind>
             <string>hsp=0;
 vsp=0;
-alarm[0]=irandom(500)
+alarm[0]=irandom(1000)
 
 </string>
           </argument>
@@ -107,7 +107,7 @@ alarm[0]=irandom(500)
             <string>vsp=random_range(-3,3)
 hsp=random_range(-3,3)
 
-alarm[1]=30;
+alarm[1]=60;
 </string>
           </argument>
         </arguments>
@@ -136,7 +136,7 @@ alarm[1]=30;
 
 if vsp != 0 || hsp != 0 
 {
-image_speed=0.2;
+image_speed=0.1;
 }
 
 else image_speed=0;
