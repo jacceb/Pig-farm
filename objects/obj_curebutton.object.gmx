@@ -106,6 +106,7 @@ if mouse_check_button_released(mb_left)
 score-=75;
 global.poison=0;
 global.pigvaluepo=0;
+global.back=1;
 with obj_curetext{instance_destroy();}
 instance_destroy();
 }

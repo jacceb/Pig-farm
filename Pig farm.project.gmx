@@ -28,6 +28,7 @@
     <sprite>sprites\spr_hijackbutton</sprite>
     <sprite>sprites\spr_hijackbutton1_5</sprite>
     <sprite>sprites\spr_hijackbutton2</sprite>
+    <sprite>sprites\spr_hijackbutton2_5</sprite>
     <sprite>sprites\spr_whipbutton</sprite>
     <sprite>sprites\spr_weaponbutton</sprite>
     <sprite>sprites\spr_curebutton</sprite>
@@ -49,11 +50,15 @@
     <sprite>sprites\sprite32</sprite>
     <sprite>sprites\spr_arrowleft</sprite>
     <sprite>sprites\spr_arrowleft2</sprite>
+    <sprite>sprites\spr_poison</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_savegame.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_8</font>
   </fonts>
@@ -67,6 +72,7 @@
     <object>objects\obj_pig</object>
     <object>objects\obj_unipig</object>
     <object>objects\obj_score</object>
+    <object>objects\obj_posionshow</object>
     <object>objects\obj_steakshow</object>
     <object>objects\obj_shopbutton</object>
     <objects name="shop">

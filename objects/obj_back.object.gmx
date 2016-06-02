@@ -56,6 +56,30 @@ else sprite_index=spr_back;
 
 if mouse_check_button_released(mb_left)
 {image_index=0;}
+
+if global.back=1
+{
+with obj_white{instance_destroy();}
+with obj_whipbutton{instance_destroy();}
+with obj_whiptext{instance_destroy();}
+with obj_spawnratebutton{instance_destroy();}
+with obj_spawnratetext{instance_destroy();}
+with obj_back{instance_destroy();}
+with obj_ascend{instance_destroy();}
+with obj_mutatebutton{instance_destroy();}
+with obj_mutatetext{instance_destroy();}
+with obj_hijackbutton{instance_destroy();}
+with obj_hijacktext{instance_destroy();}
+with obj_curebutton{instance_destroy();}
+with obj_curetext{instance_destroy();}
+
+{with obj_arrowright{instance_destroy();}}
+{with obj_arrowleft{instance_destroy();}}
+
+global.arrow=0;
+instance_create(60,25,obj_shopbutton);
+global.back=0;
+}
 </string>
           </argument>
         </arguments>
@@ -78,27 +102,7 @@ if mouse_check_button_released(mb_left)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-with obj_white{instance_destroy();}
-with obj_whipbutton{instance_destroy();}
-with obj_whiptext{instance_destroy();}
-with obj_spawnratebutton{instance_destroy();}
-with obj_spawnratetext{instance_destroy();}
-with obj_back{instance_destroy();}
-with obj_ascend{instance_destroy();}
-with obj_mutatebutton{instance_destroy();}
-with obj_mutatetext{instance_destroy();}
-with obj_hijackbutton{instance_destroy();}
-with obj_hijacktext{instance_destroy();}
-with obj_curebutton{instance_destroy();}
-with obj_curetext{instance_destroy();}
-
-{with obj_arrowright{instance_destroy();}}
-{with obj_arrowleft{instance_destroy();}}
-
-global.arrow=0;
-instance_create(60,25,obj_shopbutton);
-
+            <string>global.back=1;
 
 </string>
           </argument>

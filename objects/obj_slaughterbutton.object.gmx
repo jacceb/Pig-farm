@@ -110,7 +110,7 @@ if mouse_check_button_released(mb_left)
             <string>if global.slaughterlevel=0 &amp;&amp; score &gt;=250
 {
 score-=250;
-global.slaughterlevel+=1;
+//instance_create(500,350,obj_slaughterhouse}
 
 }
 

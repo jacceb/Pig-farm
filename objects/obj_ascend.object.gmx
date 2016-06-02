@@ -82,7 +82,7 @@ global.fat=1;
 global.spawnrate=300;
 global.dmg=1;
 global.poison=0;
-score=0;
+score=1337;
 
 
 if global.room2=1
