@@ -273,6 +273,12 @@ score+=global.fat;
 }
 
 global.pigvalue-=1;
+
+if (file_exists("savescore-sav")) file_delete("save.savscore");
+ini_open("Savescore.sav");
+ini_write_real("Save","score",score);
+ini_close();
+
 instance_destroy();
 }
 

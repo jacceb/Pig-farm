@@ -120,6 +120,24 @@ if global.mutatelevel=2 &amp;&amp; score &gt;=500
 global.mutatelevel+=1;
 global.fat+=1;
 }
+
+if (file_exists("save-sav")) file_delete("save.sav");
+ini_open("Save.sav");
+ini_write_real("Save","whiplevel",global.whiplevel);
+ini_write_real("Save","damage",global.dmg);
+ini_write_real("Save","poison",global.poison);
+ini_write_real("Save","hijacklevel",global.hijacklevel);
+ini_write_real("Save","fat",global.fat);
+ini_write_real("Save","mutatelevel,",global.mutatelevel);
+ini_write_real("Save","room2",global.room2);
+ini_write_real("Save","spawnratelevel",global.spawnratelevel);
+ini_write_real("Save","spawnrate",global.spawnrate);
+ini_close();
+
+if (file_exists("savescore-sav")) file_delete("save.savscore");
+ini_open("Savescore.sav");
+ini_write_real("Save","score",score);
+ini_close();
 </string>
           </argument>
         </arguments>

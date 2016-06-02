@@ -79,10 +79,10 @@ global.whiplevel+=1;
 global.mutatelevel+=1;
 global.hijacklevel+=1;
 global.fat=1;
-global.spawnrate=300;
+global.spawnrate=570;
 global.dmg=1;
 global.poison=0;
-score=1337;
+score=0;
 
 
 if global.room2=1
@@ -110,6 +110,26 @@ with obj_curetext{instance_destroy();}
 global.arrow=0;
 
 instance_create(60,25,obj_shopbutton);
+
+
+if (file_exists("save-sav")) file_delete("save.sav");
+ini_open("Save.sav");
+ini_write_real("Save","whiplevel",global.whiplevel);
+ini_write_real("Save","damage",global.dmg);
+ini_write_real("Save","poison",global.poison);
+ini_write_real("Save","hijacklevel",global.hijacklevel);
+ini_write_real("Save","fat",global.fat);
+ini_write_real("Save","mutatelevel,",global.mutatelevel);
+ini_write_real("Save","room2",global.room2);
+ini_write_real("Save","spawnratelevel",global.spawnratelevel);
+ini_write_real("Save","spawnrate",global.spawnrate);
+ini_close();
+
+if (file_exists("savescore-sav")) file_delete("save.savscore");
+ini_open("Savescore.sav");
+ini_write_real("Save","score",score);
+ini_close();
+
 with obj_ascend{instance_destroy();}
 </string>
           </argument>
