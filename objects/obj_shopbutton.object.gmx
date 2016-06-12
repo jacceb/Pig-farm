@@ -3,7 +3,7 @@
   <spriteName>spr_shopbutton</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-3</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -48,9 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.room2=1
-{sprite_index=spr_shopbutton2;}
-else sprite_index=spr_shopbutton;
+            <string>
 
 
 
@@ -78,7 +76,8 @@ if mouse_check_button_released(mb_left)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.arrowright=1;
+            <string>
+with obj_levelbutton{instance_destroy();}
 global.shop=1;
 instance_destroy();
 </string>

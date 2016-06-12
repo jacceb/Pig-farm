@@ -53,9 +53,20 @@ image_speed=0;
           <argument>
             <kind>1</kind>
             <string>
-if global.room2=1
+if global.rooms=1
+{if global.whiplevel=7
 {image_index=1;}
-else image_index=0;
+
+else {image_index=0;}
+}
+
+
+
+else if global.rooms=2
+{image_index=2;}
+
+else if global.rooms=3
+{image_index=3;}
 
 
 if speed &gt; 0 {

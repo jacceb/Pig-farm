@@ -71,7 +71,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index=global.mutatelevel;
+            <string>if global.rooms=1
+{
+image_index=global.mutatelevel;
+}
+
+else if global.rooms=2
+{image_index=global.mutatelevel2+2;}
 </string>
           </argument>
         </arguments>

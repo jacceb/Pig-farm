@@ -71,17 +71,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.hijacklevel=3 &amp;&amp; global.room2=1
-{sprite_index=spr_hijackbutton2_5;}
+            <string>
 
-
-else if global.hijacklevel=1
-{sprite_index=spr_hijackbutton1_5;}
-
-else if global.room2=1
-{sprite_index=spr_hijackbutton2}
-
-else {sprite_index=spr_hijackbutton}
 
 if mouse_check_button_released(mb_left)
 {image_index=0;}
@@ -89,6 +80,52 @@ if mouse_check_button_released(mb_left)
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with obj_mutatebuttoninfo{instance_destroy();}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if hspeed=0 instance_create(x,y-160,obj_mutatebuttoninfo);
 </string>
           </argument>
         </arguments>
@@ -111,7 +148,7 @@ if mouse_check_button_released(mb_left)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.hijacklevel=0 &amp;&amp; score &gt;=100
+            <string>if global.hijacklevel=0 &amp;&amp; score &gt;=100 &amp;&amp; global.rooms=1
 {
 score-=100;
 global.hijacklevel+=1;
@@ -119,29 +156,13 @@ global.fat+=1;
 }
 
 
-if global.hijacklevel=2 &amp;&amp; score &gt;=200
+if global.hijacklevel2=0 &amp;&amp; score &gt;=200 &amp;&amp; global.rooms=2
 {score-=200;
-global.hijacklevel+=1;
-global.fat+=1;
+global.hijacklevel2+=1;
+global.fat2+=1;
 }
 
-if (file_exists("save-sav")) file_delete("save.sav");
-ini_open("Save.sav");
-ini_write_real("Save","whiplevel",global.whiplevel);
-ini_write_real("Save","damage",global.dmg);
-ini_write_real("Save","poison",global.poison);
-ini_write_real("Save","hijacklevel",global.hijacklevel);
-ini_write_real("Save","fat",global.fat);
-ini_write_real("Save","mutatelevel,",global.mutatelevel);
-ini_write_real("Save","room2",global.room2);
-ini_write_real("Save","spawnratelevel",global.spawnratelevel);
-ini_write_real("Save","spawnrate",global.spawnrate);
-ini_close();
 
-if (file_exists("savescore-sav")) file_delete("save.savscore");
-ini_open("Savescore.sav");
-ini_write_real("Save","score",score);
-ini_close();
 </string>
           </argument>
         </arguments>
@@ -164,7 +185,8 @@ ini_close();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index=1;
+            <string>audio_play_sound(snd_button,10,false);
+image_index=1;
 </string>
           </argument>
         </arguments>

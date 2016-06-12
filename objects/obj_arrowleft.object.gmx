@@ -3,7 +3,7 @@
   <spriteName>spr_arrowleft</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-11</depth>
+  <depth>-12</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -48,8 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.room2=1 sprite_index=spr_arrowleft2;
-else sprite_index=spr_arrowleft;
+            <string>
 
 
 if mouse_check_button_released(mb_left)
@@ -121,6 +120,13 @@ hspeed=+29;}}
 hspeed=+29;}}
 }
 
+with obj_hattext
+{alarm[0]=30;
+hspeed=+29;}
+
+with obj_hatbutton 
+{alarm[0]=30;
+hspeed=+29;}
 
 
 if global.arrow=2
@@ -128,8 +134,7 @@ if global.arrow=2
 if global.arrow=1
 {
 
-if global.poison=0
-{instance_create(760,250,obj_arrowright)}
+
 
 
 

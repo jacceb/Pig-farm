@@ -53,9 +53,6 @@ image_speed=0;
           <argument>
             <kind>1</kind>
             <string>
-if global.room2=1
-{image_index=1;}
-else image_index=0;
 
 
 if speed &gt; 0 {

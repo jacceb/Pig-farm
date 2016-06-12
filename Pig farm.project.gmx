@@ -6,56 +6,142 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\Soundtrack</sound>
+    <sound>sound\snd_pigdeath</sound>
+    <sound>sound\snd_backroundmusic</sound>
+    <sound>sound\snd_button</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_pig</sprite>
-    <sprite>sprites\spr_pigpo</sprite>
-    <sprite>sprites\spr_pig1_5</sprite>
-    <sprite>sprites\spr_pig1_5po</sprite>
+    <sprites name="pig lvl 1">
+      <sprite>sprites\spr_pig</sprite>
+      <sprite>sprites\spr_pighat</sprite>
+      <sprite>sprites\spr_pigpo</sprite>
+      <sprite>sprites\spr_pigpohat</sprite>
+      <sprite>sprites\spr_pig1_5</sprite>
+      <sprite>sprites\spr_pig1_5po</sprite>
+      <sprite>sprites\spr_pig1_5hat</sprite>
+      <sprite>sprites\spr_pig1_5pohat</sprite>
+      <sprite>sprites\spr_unipig</sprite>
+      <sprite>sprites\spr_pigonfire</sprite>
+      <sprite>sprites\spr_pigonfireglowtest</sprite>
+      <sprite>sprites\spr_chutulupigs</sprite>
+    </sprites>
     <sprite>sprites\spr_pig2</sprite>
-    <sprite>sprites\spr_unipig</sprite>
+    <sprite>sprites\spr_chutulupig2</sprite>
+    <sprite>sprites\spr_tumbleweed</sprite>
+    <sprite>sprites\spr_pig3</sprite>
     <sprite>sprites\spr_hit</sprite>
     <sprite>sprites\spr_steak</sprite>
     <sprite>sprites\spr_steakpo</sprite>
     <sprite>sprites\spr_unisteak</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_settingsbutton</sprite>
-    <sprite>sprites\spr_spawnratebutton</sprite>
-    <sprite>sprites\spr_spawnratebutton2</sprite>
-    <sprite>sprites\spr_mutatebutton</sprite>
-    <sprite>sprites\spr_mutatebutton1_5</sprite>
+    <sprite>sprites\spr_spawnratebuttonold</sprite>
+    <sprite>sprites\spr_hijackbutton_old</sprite>
+    <sprite>sprites\spr_mutatebutton_old</sprite>
+    <sprites name="Shop_2.0">
+      <sprite>sprites\spr_hijackbutton</sprite>
+      <sprite>sprites\spr_mutatebutton</sprite>
+      <sprite>sprites\spr_curebutton</sprite>
+    </sprites>
     <sprite>sprites\spr_mutatebutton2</sprite>
-    <sprite>sprites\spr_hijackbutton</sprite>
-    <sprite>sprites\spr_hijackbutton1_5</sprite>
     <sprite>sprites\spr_hijackbutton2</sprite>
-    <sprite>sprites\spr_hijackbutton2_5</sprite>
-    <sprite>sprites\spr_whipbutton</sprite>
-    <sprite>sprites\spr_weaponbutton</sprite>
-    <sprite>sprites\spr_curebutton</sprite>
+    <sprite>sprites\spr_curebuttonold</sprite>
+    <sprite>sprites\spr_hat</sprite>
     <sprite>sprites\spr_spawnratetext</sprite>
-    <sprite>sprites\spr_whiptext</sprite>
     <sprite>sprites\spr_curetext</sprite>
     <sprite>sprites\spr_mutatetext</sprite>
     <sprite>sprites\spr_hijacktext</sprite>
+    <sprite>sprites\spr_hattext</sprite>
+    <sprite>sprites\spr_levelbutton</sprite>
     <sprite>sprites\spr_shopbutton</sprite>
-    <sprite>sprites\spr_shopbutton2</sprite>
     <sprite>sprites\spr_back</sprite>
     <sprite>sprites\spr_back2</sprite>
     <sprite>sprites\spr_ascend</sprite>
     <sprite>sprites\spr_ascend2</sprite>
     <sprite>sprites\spr_white</sprite>
     <sprite>sprites\spr_hai</sprite>
+    <sprite>sprites\spr_background</sprite>
     <sprite>sprites\spr_arrowright</sprite>
-    <sprite>sprites\spr_arrowright2</sprite>
-    <sprite>sprites\sprite32</sprite>
     <sprite>sprites\spr_arrowleft</sprite>
-    <sprite>sprites\spr_arrowleft2</sprite>
     <sprite>sprites\spr_poison</sprite>
+    <sprites name="Spawnratebuttons">
+      <sprite>sprites\spr_spawnratebutton1</sprite>
+      <sprite>sprites\spr_spawnratebutton2</sprite>
+      <sprite>sprites\spr_spawnratebutton3</sprite>
+      <sprite>sprites\spr_spawnratebutton4</sprite>
+      <sprite>sprites\spr_spawnratebutton5</sprite>
+      <sprite>sprites\spr_spawnratebutton6</sprite>
+      <sprite>sprites\spr_spawnratebutton7</sprite>
+      <sprite>sprites\spr_spawnratebutton8</sprite>
+      <sprite>sprites\spr_spawnratebutton9</sprite>
+      <sprite>sprites\spr_spawnratebuttonmall</sprite>
+    </sprites>
+    <sprites name="Buttoninfos">
+      <sprite>sprites\spr_mutatebuttoninfo</sprite>
+      <sprite>sprites\spr_whipbuttoninfo</sprite>
+      <sprite>sprites\spr_spawnratebuttoninfo</sprite>
+    </sprites>
+    <sprites name="Weapons">
+      <sprites name="Whipbutton">
+        <sprite>sprites\spr_whipbutton1</sprite>
+        <sprite>sprites\spr_whipbutton2</sprite>
+        <sprite>sprites\spr_whipbutton3</sprite>
+        <sprite>sprites\spr_whipbutton4</sprite>
+        <sprite>sprites\spr_whipbutton5</sprite>
+        <sprite>sprites\spr_whipbutton6</sprite>
+        <sprite>sprites\spr_whipbutton7</sprite>
+        <sprite>sprites\spr_whipbuttonmall</sprite>
+      </sprites>
+      <sprites name="Axebutton">
+        <sprite>sprites\spr_axebutton1</sprite>
+        <sprite>sprites\spr_axebutton2</sprite>
+        <sprite>sprites\spr_axebutton3</sprite>
+        <sprite>sprites\spr_axebutton4</sprite>
+        <sprite>sprites\spr_axebutton5</sprite>
+        <sprite>sprites\spr_axebutton6</sprite>
+        <sprite>sprites\spr_axebuttonmall</sprite>
+      </sprites>
+      <sprite>sprites\spr_weapontext</sprite>
+      <sprite>sprites\spr_weaponshow</sprite>
+      <sprites name="old">
+        <sprite>sprites\spr_whipbutton1old</sprite>
+        <sprite>sprites\spr_whipbutton2old</sprite>
+        <sprite>sprites\spr_whipbutton3old</sprite>
+        <sprite>sprites\spr_whipbutton4old</sprite>
+        <sprite>sprites\spr_whipbutton5old</sprite>
+        <sprite>sprites\spr_whipbutton6old</sprite>
+        <sprite>sprites\spr_whipbutton7old</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="levelselect">
+      <sprite>sprites\spr_level1button</sprite>
+      <sprite>sprites\spr_level2button</sprite>
+      <sprite>sprites\spr_level2buttonhidden</sprite>
+      <sprite>sprites\spr_level3button</sprite>
+      <sprite>sprites\spr_level3buttonhidden</sprite>
+    </sprites>
+    <sprites name="Coin">
+      <sprite>sprites\spr_coin1</sprite>
+      <sprite>sprites\spr_coin2</sprite>
+      <sprite>sprites\spr_coin3</sprite>
+      <sprite>sprites\spr_coin4</sprite>
+      <sprite>sprites\spr_coinshadow</sprite>
+      <sprite>sprites\spr_coinshadow2</sprite>
+    </sprites>
+    <sprite>sprites\spr_Hud</sprite>
+    <sprite>sprites\sprite78</sprite>
+    <sprite>sprites\spr_gate</sprite>
+    <sprites name="Environment">
+      <sprite>sprites\spr_flower</sprite>
+      <sprite>sprites\spr_bush</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\scr_savegame.gml</script>
   </scripts>
@@ -70,11 +156,18 @@
     <object>objects\obj_steakpo</object>
     <object>objects\obj_unisteak</object>
     <object>objects\obj_pig</object>
+    <object>objects\obj_chutulupig</object>
     <object>objects\obj_unipig</object>
     <object>objects\obj_score</object>
     <object>objects\obj_posionshow</object>
     <object>objects\obj_steakshow</object>
     <object>objects\obj_shopbutton</object>
+    <object>objects\obj_levelbutton</object>
+    <objects name="levelselect">
+      <object>objects\obj_level1button</object>
+      <object>objects\obj_level2button</object>
+      <object>objects\obj_level3button</object>
+    </objects>
     <objects name="shop">
       <object>objects\obj_whipbutton</object>
       <object>objects\obj_mutatebutton</object>
@@ -82,22 +175,51 @@
       <object>objects\obj_slaughterbutton</object>
       <object>objects\obj_hijackbutton</object>
       <object>objects\obj_spawnratebutton</object>
+      <object>objects\obj_hatbutton</object>
       <object>objects\obj_whiptext</object>
       <object>objects\obj_curetext</object>
       <object>objects\obj_mutatetext</object>
       <object>objects\obj_hijacktext</object>
       <object>objects\obj_spawnratetext</object>
+      <object>objects\obj_hattext</object>
+    </objects>
+    <object>objects\obj_arrowleft</object>
+    <object>objects\obj_arrowright</object>
+    <objects name="Buttoninfos">
+      <object>objects\obj_mutatebuttoninfo</object>
+      <object>objects\obj_spawnratebuttoninfo</object>
+      <object>objects\obj_whipbuttoninfo</object>
     </objects>
     <object>objects\obj_back</object>
-    <object>objects\obj_setuptheshopbois</object>
+    <object>objects\obj_setuptheshop_level_bois</object>
     <object>objects\obj_white</object>
     <object>objects\obj_ascend</object>
-    <object>objects\obj_hai</object>
-    <object>objects\obj_arrowright</object>
-    <object>objects\obj_arrowleft</object>
+    <object>objects\obj_background</object>
+    <object>objects\obj_yourweapon</object>
+    <object>objects\obj_tumbleweed</object>
+    <objects name="Coin">
+      <object>objects\obj_coinshadow</object>
+      <object>objects\obj_coinshadow2</object>
+      <object>objects\obj_coin1</object>
+      <object>objects\obj_coin2</object>
+      <object>objects\obj_coin3</object>
+      <object>objects\obj_coin4</object>
+    </objects>
+    <object>objects\obj_HUD</object>
+    <object>objects\obj_tumbleweedspawner</object>
+    <objects name="environment">
+      <objects name="level1">
+        <object>objects\obj_flower</object>
+        <object>objects\obj_bush</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_game</room>
+    <room>rooms\rm_lobby</room>
+    <room>rooms\rm_level1</room>
+    <room>rooms\rm_level2</room>
+    <room>rooms\rm_level3</room>
+    <room>rooms\rm_level5</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

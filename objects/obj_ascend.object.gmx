@@ -85,11 +85,11 @@ global.poison=0;
 score=0;
 
 
-if global.room2=1
-{global.room2=0;
-global.room3=1;}
+if global.rooms=2
+{;
+global.rooms=3;}
 
-else global.room2=1;
+else global.rooms=1;
 
 with obj_white{instance_destroy();}
 with obj_whipbutton{instance_destroy();}

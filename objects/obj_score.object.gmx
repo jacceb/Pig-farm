@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-5</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>room_width-100</string>
+            <string>room_width-154</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>room_height-465</string>
+            <string>room_height-458</string>
           </argument>
           <argument>
             <kind>1</kind>

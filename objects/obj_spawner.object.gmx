@@ -2,9 +2,9 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -26,6 +26,143 @@
           <argument>
             <kind>1</kind>
             <string>alarm[0]=200;
+alarm[1]=60;
+if global.poisonactivated=1
+{alarm[2]=irandom_range(72000,108000);}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.poison=1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.rooms=1
+{
+if (file_exists("save-sav")) file_delete("save.sav");
+ini_open("Save.sav");
+ini_write_real("Save","whiplevel",global.whiplevel);
+ini_write_real("Save","damage",global.dmg);
+ini_write_real("Save","poison",global.poison);
+ini_write_real("Save","hijacklevel",global.hijacklevel);
+ini_write_real("Save","fat",global.fat);
+ini_write_real("Save","mutatelevel,",global.mutatelevel);
+ini_write_real("Save","spawnratelevel",global.spawnratelevel);
+ini_write_real("Save","spawnrate",global.spawnrate);
+ini_write_real("Save","chutuluweapon",global.chutuluweapon);
+ini_write_real("Save","hat",global.hat);
+ini_write_real("Save","level2unlocked",global.level2unlocked);
+ini_write_real("Save","coin",global.coin);
+ini_write_real("Save","poisonactivated",global.poisonactivated);
+ini_close();
+
+
+
+if (file_exists("savescore-sav")) file_delete("save.savscore");
+ini_open("Savescore.sav");
+ini_write_real("Save","score1",score);
+ini_close();
+
+}
+
+//room 2 saves
+
+else if global.rooms=2
+{
+
+if (file_exists("save-sav2")) file_delete("save.sav2");
+ini_open("Save.sav2");
+ini_write_real("Save","whiplevel",global.whiplevel2);
+ini_write_real("Save","damage",global.dmg2);
+ini_write_real("Save","hijacklevel",global.hijacklevel2);
+ini_write_real("Save","fat",global.fat2);
+ini_write_real("Save","mutatelevel,",global.mutatelevel2);
+ini_write_real("Save","spawnratelevel",global.spawnratelevel2);
+ini_write_real("Save","spawnrate",global.spawnrate2);
+ini_write_real("Save","level3unlocked",global.level3unlocked);
+ini_write_real("Save","coin",global.coin2);
+ini_close();
+
+
+
+if (file_exists("savescore-sav")) file_delete("save.savscore");
+ini_open("Savescore.sav");
+ini_write_real("Save","score2",score);
+ini_close();
+
+}
+
+
+else if global.rooms=3
+{
+
+if (file_exists("save-sav3")) file_delete("save.sav3");
+ini_open("Save.sav3");
+ini_write_real("Save","whiplevel",global.whiplevel3);
+ini_write_real("Save","damage",global.dmg3);
+ini_write_real("Save","hijacklevel",global.hijacklevel3);
+ini_write_real("Save","fat",global.fat3);
+ini_write_real("Save","mutatelevel,",global.mutatelevel3);
+ini_write_real("Save","spawnratelevel",global.spawnratelevel3);
+ini_write_real("Save","spawnrate",global.spawnrate3);
+
+
+ini_close();
+
+
+
+if (file_exists("savescore-sav")) file_delete("save.savscore");
+ini_open("Savescore.sav");
+ini_write_real("Save","score3",score);
+ini_close();
+
+}
+
+
+
+
+
+
+
+alarm[1]=60;
 </string>
           </argument>
         </arguments>
@@ -48,30 +185,70 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spawn=irandom(10000);
+            <string>
 
-if (global.pigvalue&lt;=10)
+
+
+
+
+if global.rooms=1
 {
 
-if spawn &gt;=1
+if global.pigvalue&lt;=10
 {
-instance_create(random_range(200,600),random_range(100,380),obj_pig);
-}
+if irandom (250) = 1 &amp;&amp; global.level2unlocked=1
+{instance_create(random_range(100,650),random_range(100,380),obj_chutulupig);}
+
+
 else
-{{instance_create(random_range(200,600),random_range(100,380),obj_unipig);}}
+{
+instance_create(random_range(150,650),random_range(100,380),obj_pig);
 }
-
-
+}
 alarm[0]=irandom(global.spawnrate);
 
+}
+
+
+else if global.rooms=2
+{
+
+if (global.pigvalue2&lt;=10)
+{
+
+if irandom (30) = 1
+{instance_create(random_range(100,650),random_range(100,380),obj_chutulupig);}
+
+
+
+
+else
+{instance_create(random_range(150,650),random_range(100,380),obj_pig);}
+}
+alarm[0]=irandom(global.spawnrate2);
+
+}
+
+
+else if global.rooms=3
+{
+
+if (global.pigvalue2&lt;=10)
+{
+instance_create(random_range(150,650),random_range(100,380),obj_pig);
+}
+alarm[0]=irandom(global.spawnrate3);
+
+}
 
 
 
 
 
-//irandom(global.spawnrate);
 
-//instance_create(random_range(32,736),random_range(32,416),obj_pig);
+
+
+
 
 </string>
           </argument>

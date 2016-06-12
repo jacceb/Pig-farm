@@ -6,11 +6,11 @@
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
-  <speed>30</speed>
-  <persistent>0</persistent>
-  <colour>16777215</colour>
+  <speed>60</speed>
+  <persistent>-1</persistent>
+  <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>global.pigvalue2=0;</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -51,7 +51,23 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_hai" x="0" y="0" name="inst_D89DF742" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_background" x="0" y="0" name="inst_DE3C4553" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_shopbutton" x="62" y="37" name="inst_8B0FC89B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_steakshow" x="608" y="15" name="inst_74D1510A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_score" x="256" y="0" name="inst_7213B775" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_setuptheshop_level_bois" x="0" y="0" name="inst_942C4553" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_spawner" x="0" y="0" name="inst_BBA00920" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="416" y="-32" name="inst_FB73923C" locked="0" code="" scaleX="27.25" scaleY="2.83870959281921" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="864" y="256" name="inst_96531841" locked="0" code="" scaleX="4.5" scaleY="22.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="480" y="544" name="inst_A7D8E2C8" locked="0" code="" scaleX="35.7419357299805" scaleY="4.96875" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="-32" y="256" name="inst_6C090F48" locked="0" code="" scaleX="3.25" scaleY="17.25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="-32" y="-32" name="inst_FFE8B9A1" locked="0" code="" scaleX="3.25" scaleY="3.59999990463257" colour="4294967295" rotation="0"/>
+    <instance objName="obj_HUD" x="0" y="0" name="inst_EAF42FFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_levelbutton" x="62" y="112" name="inst_6380896A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_yourweapon" x="64" y="424" name="inst_04143156" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tumbleweed" x="-128" y="256" name="inst_9F276F2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tumbleweedspawner" x="320" y="0" name="inst_B8EF3C4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_coinshadow2" x="742" y="137" name="inst_1C2F9A3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

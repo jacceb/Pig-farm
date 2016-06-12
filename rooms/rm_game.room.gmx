@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>16777215</colour>
   <showcolour>-1</showcolour>
-  <code>if (file_exists("Save.sav")) 
+  <code>//Room 1 saves
+if (file_exists("Save.sav")) 
 {
 ini_open("Save.sav");
 global.whiplevel=ini_read_real("Save","whiplevel",0);
@@ -19,9 +20,9 @@ global.poison=ini_read_real("Save","poison",0);
 global.hijacklevel=ini_read_real("Save","hijacklevel",0);
 global.fat=ini_read_real("Save","fat",1);
 global.mutatelevel=ini_read_real("Save","mutatelevel,",0);
-global.room2=ini_read_real("Save","room2",0);
 global.spawnratelevel=ini_read_real("Save","spawnratelevel",0);
 global.spawnrate=ini_read_real("Save","spawnrate",570);
+global.chutuluweapon=ini_read_real("save","chutuluweapon",0);
 ini_close();
 
 }
@@ -35,28 +36,74 @@ global.whiplevel=0;
 global.mutatelevel=0;
 global.hijacklevel=0;
 global.dmg=1;
-global.room2=0;
 global.fat=1;
 global.poison=0;
-
+global.chutuluweapon=0;
 }
-global.pigvalue=0;
-global.pigvaluepo=0;
-global.back=0;
-global.shop=0;
-global.arrow=0;
 
 
 if (file_exists("Savescore.sav"))
 {
 ini_open("Savescore.sav");
-score=ini_read_real("Save","score",0);
+score=ini_read_real("Save","score1",0);
 ini_close();
 }
 
+else {score=20000}
+
+
+
+
+
+
+//Room 2 saves
+if (file_exists("Save.sav2")) 
+{
+ini_open("Save.sav2");
+global.whiplevel2=ini_read_real("Save","whiplevel",0);
+global.dmg2=ini_read_real("Save","damage",1);
+
+global.hijacklevel2=ini_read_real("Save","hijacklevel",0);
+global.fat2=ini_read_real("Save","fat",1);
+global.mutatelevel2=ini_read_real("Save","mutatelevel,",0);
+global.spawnratelevel2=ini_read_real("Save","spawnratelevel",0); 
+global.spawnrate2=ini_read_real("Save","spawnrate",570);
+global.level2unlocked=ini_read_real("Save","level2unlocked",570);
+ini_close();
+
+}
+
+
 else
 {
-score=0;}</code>
+global.spawnratelevel2=0;
+global.spawnrate2=570;
+global.whiplevel2=0;
+global.mutatelevel2=0;
+global.hijacklevel2=0;
+global.dmg2=1;
+global.level2unlocked=0;
+
+global.fat2=1;
+
+
+}
+
+
+
+
+
+
+
+//Spare globals set
+
+global.rooms=1;
+global.pigvalue=0;
+global.pigvaluepo=0;
+global.back=0;
+global.shop=0;
+global.arrow=0;
+global.setuplevel=0;</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -97,7 +144,6 @@ score=0;}</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_steakshow" x="640" y="7" name="inst_43172A60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_score" x="0" y="0" name="inst_D5FA265E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawner" x="32" y="32" name="inst_63DE09B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="384" y="-64" name="inst_3F1C4D23" locked="0" code="" scaleX="-25.875" scaleY="-4.125" colour="4294967295" rotation="0"/>
@@ -105,9 +151,13 @@ score=0;}</code>
     <instance objName="obj_wall" x="-96" y="288" name="inst_0A95BBB2" locked="0" code="" scaleX="6.01999998092651" scaleY="24.3125" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="416" y="576" name="inst_25F0E932" locked="0" code="" scaleX="26.125" scaleY="5.98999977111816" colour="4294967295" rotation="0"/>
     <instance objName="obj_shopbutton" x="60" y="25" name="inst_2E8A68EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_setuptheshopbois" x="0" y="0" name="inst_D6C33C17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="60" y="25" name="inst_B6725834" locked="0" code="" scaleX="3.79999995231628" scaleY="1.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_setuptheshop_level_bois" x="0" y="0" name="inst_D6C33C17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="60" y="25" name="inst_B6725834" locked="0" code="" scaleX="3.79999995231628" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_posionshow" x="110" y="2" name="inst_C6377F27" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_levelbutton" x="60" y="65" name="inst_B4B3DF08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_background" x="0" y="0" name="inst_3609E05F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_yourweapon" x="106" y="195" name="inst_133AD760" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_chutulushadow" x="672" y="64" name="inst_58AFD2CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

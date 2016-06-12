@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.room2=1
+            <string>if global.rooms=2
 {sprite_index=spr_back2;}
 else sprite_index=spr_back;
 
@@ -72,12 +72,14 @@ with obj_hijackbutton{instance_destroy();}
 with obj_hijacktext{instance_destroy();}
 with obj_curebutton{instance_destroy();}
 with obj_curetext{instance_destroy();}
-
+with obj_hatbutton{instance_destroy();}
+with obj_hattext{instance_destroy();}
 {with obj_arrowright{instance_destroy();}}
 {with obj_arrowleft{instance_destroy();}}
 
 global.arrow=0;
-instance_create(60,25,obj_shopbutton);
+instance_create(62,37,obj_shopbutton);
+instance_create(62,112,obj_levelbutton);
 global.back=0;
 }
 </string>
