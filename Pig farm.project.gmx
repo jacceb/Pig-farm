@@ -51,6 +51,7 @@
     <sprite>sprites\spr_arrowleft</sprite>
     <sprite>sprites\spr_arrowleft2</sprite>
     <sprite>sprites\spr_poison</sprite>
+    <sprite>sprites\spr_cactus</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
